@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SqlDialectMappings">
+    <file url="file://$PROJECT_DIR$/AdminInterface.py" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/Admin_add.py" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/Admin_edit.py" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/Admin_list.py" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/Admin_remove.py" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/Interface.py" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/sorgavasal.db" dialect="GenericSQL" />
+  </component>
+</project>
