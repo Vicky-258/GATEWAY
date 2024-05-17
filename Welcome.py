@@ -71,6 +71,5 @@ def Welcome_main():
     user_name_btn.place(x=195, y=340)
 
     window.mainloop()
-#helloHi
 
 Welcome_main()
