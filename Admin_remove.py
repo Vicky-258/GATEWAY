@@ -20,6 +20,7 @@ def admin_remove():
         if username == user[0][0]:
             cursor.execute(f"DELETE FROM user_logins WHERE username = ('{username}');")
             connection.commit()
+            messagebox.showinfo("User Removed", "User Removed Successfully")
     except Exception:
         messagebox.showerror("Error", "Username does not exist")
 
@@ -67,3 +68,5 @@ def remove_main():
     button.place(x=200, y=190)
 
     window.mainloop()
+
+remove_main()

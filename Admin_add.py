@@ -9,9 +9,11 @@ cursor = connection.cursor()
 
 userName = ""
 password = ""
+Email = ""
 
 userEntry = None
 passEntry = None
+mailEntry = None
 
 
 def add_user():
@@ -21,14 +23,16 @@ def add_user():
         if userName == user[0][0]:
             messagebox.showerror("Error", "Username already exists")
     except IndexError:
-        cursor.execute(f"""INSERT INTO user_logins(username,password) VALUES ('{userName}','{password}');""")
+        print(userName, password, Email)
+        cursor.execute(f"""INSERT INTO user_logins(username,password,Email) VALUES ('{userName}','{password}','{Email}');""")
         connection.commit()
         messagebox.showinfo("Success", "User added")
 
 
 def click():
-    global userName, password
+    global userName, password, Email
     userName = userEntry.get()
+    Email = mailEntry.get()
     password = passEntry.get()
 
     if PasswordCheck.check_password(password) == "lenerror":
@@ -40,9 +44,11 @@ def click():
     else:
         messagebox.showerror("Error", "Weak Password")
 
+    # place where email function should be deployed 😁
+
 
 def Add_main():
-    global userEntry, passEntry
+    global userEntry, passEntry, mailEntry
     window = Tk()
 
     window.geometry('500x500')
@@ -71,6 +77,15 @@ def Add_main():
     passEntry.place(x=185, y=144, height=22.5, width=150)
 
     button = Button(window, text="Add user", bg="red", fg="white", command=click)
-    button.place(x=200, y=190)
+    button.place(x=200, y=235)
+
+    mailLabel = Label(window, text='Email', font=('Arial', 10, 'italic'), fg='#ced0d6', bg='#1e1f22', borderwidth=0,
+                      relief='sunken')
+    mailLabel.place(x=95, y=190)
+
+    mailEntry = Entry(window, font=("Arial", 10))
+    mailEntry.place(x=185, y=189, height=22.5, width=150)
 
     window.mainloop()
+
+Add_main()
