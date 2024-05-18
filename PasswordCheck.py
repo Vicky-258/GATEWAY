@@ -1,6 +1,6 @@
 
 def check_password(password):
-    if len(password) < 8:
+    if len(password) <= 8:
         return "lenerror"
 
     abond_char = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "-", "_", "+", "=", ":", ";", "<", ">", ".", "/",

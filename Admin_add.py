@@ -24,7 +24,8 @@ def add_user():
             messagebox.showerror("Error", "Username already exists")
     except IndexError:
         print(userName, password, Email)
-        cursor.execute(f"""INSERT INTO user_logins(username,password,Email) VALUES ('{userName}','{password}','{Email}');""")
+        cursor.execute(
+            f"""INSERT INTO user_logins(username,password,Email) VALUES ('{userName}','{password}','{Email}');""")
         connection.commit()
         messagebox.showinfo("Success", "User added")
 
@@ -88,4 +89,5 @@ def Add_main():
 
     window.mainloop()
 
-Add_main()
+
+
