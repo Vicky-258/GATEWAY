@@ -44,9 +44,6 @@ def remove_main():
     title = Label(window, text="Remove User", bg='#1e1f22', fg='white', font=('Helvetica', 20, 'bold'))
     title.pack()
 
-    icon = PhotoImage(file='remove.png')
-    window.iconphoto(True, icon)
-
     seperator = ttk.Separator(window, orient=HORIZONTAL)
     seperator.place(y=50, height=3, width=500)
 
@@ -69,4 +66,3 @@ def remove_main():
 
     window.mainloop()
 
-remove_main()

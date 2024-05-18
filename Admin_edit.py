@@ -61,9 +61,6 @@ def Edit_main():
     title = Label(window, text="Edit User", bg='#1e1f22', fg='white', font=('Helvetica', 20, 'bold'))
     title.pack()
 
-    icon = PhotoImage(file='edit.png')
-    window.iconphoto(True, icon)
-
     seperator = ttk.Separator(window, orient=HORIZONTAL)
     seperator.place(y=50, height=3, width=500)
 

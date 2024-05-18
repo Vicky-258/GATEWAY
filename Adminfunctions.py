@@ -8,19 +8,15 @@ import Admin_list
 
 def Admin_functions_main():
     def add():
-        Admin_functions_window.destroy()
         Admin_add.Add_main()
 
     def edit():
-        Admin_functions_window.destroy()
         Admin_edit.Edit_main()
 
     def remove():
-        Admin_functions_window.destroy()
         Admin_remove.remove_main()
 
     def listUsers():
-        Admin_functions_window.destroy()
         Admin_list.List_main()
 
     Admin_functions_window = Tk()
@@ -137,3 +133,5 @@ def Admin_functions_main():
     edit_label.place(x=321, y=369)
 
     Admin_functions_window.mainloop()
+
+Admin_functions_main()
