@@ -133,5 +133,3 @@ def Admin_functions_main():
     edit_label.place(x=321, y=369)
 
     Admin_functions_window.mainloop()
-
-Admin_functions_main()
