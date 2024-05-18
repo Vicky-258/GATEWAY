@@ -16,10 +16,11 @@ passwordEntry = None
 
 def login_user():
     user = list(cursor.execute(f"""SELECT * FROM user_logins WHERE username = ('{userName}');"""))
+    pa__sss = list(cursor.execute(f"""SELECT * FROM user_logins WHERE password = ('{password}');"""))
     connection.commit()
 
     try:
-        if userName == user[0][0]:
+        if userName == user[0][0] and password == pa__sss[0][0]:
             messagebox.showinfo("User Login", "Login Successful")
 
     except IndexError:
