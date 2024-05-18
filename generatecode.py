@@ -1,10 +1,9 @@
 import random
 #this function for generate code for mail login
 def generate_code():
-    ualpha=[chr(x) for x in range(65,91)]
     lalpha=[chr(x) for x in range(97,122)]
     num=[f'{i}' for i  in range(10)]
-    data = ualpha+lalpha+num
+    data = lalpha+num
     code = random.choices(data,k=8)
     return ''.join(code)
 
