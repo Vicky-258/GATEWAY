@@ -21,15 +21,14 @@ def list_user():
     style.configure('Treeview.Heading', background="green3")
     style.layout("mystyle.Treeview", [('mystyle.Treeview.treearea', {'sticky': 'nswe'})])  # Remove the borders
 
-    lu.resizable(width=False, height=False)
-    lu.geometry("500x500")
+    lu.geometry()
     lu.config(background="#1e1f22")
 
     # Create a Treeview widget to display data in a tabular format
-    tree = ttk.Treeview(lu, columns=("Username", "Password"), style="mystyle.Treeview", height=100)
+    tree = ttk.Treeview(lu, columns=("Username", "Password"), style="mystyle.Treeview")
 
     tree.heading("#0", text="Index")  # Index column
-    tree.column("#0",width=162, anchor=CENTER)
+    tree.column("#0", width=162, anchor=CENTER)
 
     for col in tree["columns"]:
         tree.heading(col, text=col)
