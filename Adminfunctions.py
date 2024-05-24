@@ -3,7 +3,7 @@ from tkinter import ttk
 import Admin_add
 import Admin_edit
 import Admin_remove
-import Admin_list
+import list
 
 
 def Admin_functions_main():
@@ -17,7 +17,7 @@ def Admin_functions_main():
         Admin_remove.remove_main()
 
     def listUsers():
-        Admin_list.List_main()
+        list.list_user()
 
     Admin_functions_window = Tk()
     Admin_functions_window.title("Admin Interface")

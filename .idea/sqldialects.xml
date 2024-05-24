@@ -7,6 +7,8 @@
     <file url="file://$PROJECT_DIR$/Admin_list.py" dialect="GenericSQL" />
     <file url="file://$PROJECT_DIR$/Admin_remove.py" dialect="GenericSQL" />
     <file url="file://$PROJECT_DIR$/Interface.py" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/list.py" dialect="GenericSQL" />
     <file url="file://$PROJECT_DIR$/sorgavasal.db" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/validation.py" dialect="GenericSQL" />
   </component>
 </project>

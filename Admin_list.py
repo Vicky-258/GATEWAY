@@ -2,18 +2,21 @@ from tkinter import *
 from tkinter import ttk
 from tkinter import messagebox
 import sqlite3
+
 connection = sqlite3.connect('sorgavasal.db')
 cursor = connection.cursor()
+
 
 def List_main():
     global records
     try:
-       queries = """SELECT username FROM user_logins"""
-       cursor.execute(queries)
-       records = cursor.fetchall()
+        queries = """SELECT username FROM user_logins"""
+        cursor.execute(queries)
+        records = cursor.fetchall()
 
     except Exception:
         messagebox.showerror("Error", "Database Error")
+
     window = Tk()
     window.geometry('500x500')
     window.title('list of Users')
@@ -28,7 +31,7 @@ def List_main():
 
     t = Text(window, font=('Helvetica', 15, 'bold'), bg='#1e1f22', fg='white', borderwidth=0, relief='sunken')
     for x in list(records):
-        t.insert(END,f" =>  {x[0]}\n\n")
+        t.insert(END, f" =>  {x[0]}\n\n")
     t.place(x=0, y=75)
 
     window.mainloop()
